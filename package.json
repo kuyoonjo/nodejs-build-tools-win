@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-build-tools-win",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "docker build -t kuyoonjo/nodejs-build-tools-win -m 2GB .",
+    "push": "docker push kuyoonjo/nodejs-build-tools-win:latest"
+  },
+  "author": "Yu Chen",
+  "license": "ISC"
+}
