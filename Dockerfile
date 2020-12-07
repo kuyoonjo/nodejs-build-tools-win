@@ -16,5 +16,6 @@ RUN set ELECTRON_MIRROR=http://npm.taobao.org/mirrors/atom-shell && cmake-js --r
 ADD https://aka.ms/vs/16/release/vs_community.exe C:/TEMP/vs_community.exe
 RUN C:\TEMP\vs_community.exe --quiet --wait --norestart --nocache --noUpdateInstaller --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
+ENV ELECTRON_MIRROR http://npm.taobao.org/mirrors/atom-shell
 RUN cmake-js || true
-RUN set ELECTRON_MIRROR=http://npm.taobao.org/mirrors/atom-shell && cmake-js --runtime=electron --runtime-version=5.0.10 || true
+RUN cmake-js --runtime=electron --runtime-version=5.0.10 || true
