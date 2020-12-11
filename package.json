@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:vs": "docker build -t kuyoonjo/vs -m 2GB -f vs.Dockerfile .",
+    "build:choco": "docker build -t kuyoonjo/vs -m 2GB -f choco.Dockerfile .",
     "build": "docker build -t kuyoonjo/nodejs-build-tools-win -m 2GB .",
     "push": "docker push kuyoonjo/nodejs-build-tools-win:latest"
   },
